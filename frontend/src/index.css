@@ -6,7 +6,7 @@
 https://unsplash.com/fr/photos/montagne-enneigee-sous-les-etoiles-phIFdC6lA4E */
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../public/MountainBackground.png");
+    url("/MountainBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
