@@ -1,4 +1,4 @@
-// import Message from "./../models/message.model";
+import { getReceiverSocketId, io } from "../socket/socket.js";
 import Conversation from "./../models/conversation.model.js";
 import Message from "./../models/message.model.js";
 
@@ -48,14 +48,19 @@ export const sendMessage = async (req, res) => {
       conversation.messages.push(newMessage._id);
     }
 
-    // SOCKET IO FUNCTIONNALITY WILL GO HERE
-
     // This method works but can be slow
     // await conversation.save();
     // await newMessage.save();
 
     // This allows to run both in parallel
-    await Promise.all([[conversation.save(), newMessage.save()]]);
+    await Promise.all([conversation.save(), newMessage.save()]);
+
+    // SOCKET IO FUNCTIONNALITY WILL GO HERE
+    const receiverSocketId = getReceiverSocketId(receiverId);
+    if (receiverSocketId) {
+      // io.to(<socket_id>).emit() is used to send events to a specific client
+      io.to(receiverSocketId).emit("newMessage", newMessage);
+    }
 
     res.status(201).json(newMessage);
   } catch (error) {
