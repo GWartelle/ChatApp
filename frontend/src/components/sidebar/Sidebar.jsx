@@ -10,8 +10,10 @@ const Sidebar = () => {
       <div className="divider px-3"></div>
       <Conversations />
 
-      <LogoutButton />
-      <DeleteButton />
+      <div className="mt-auto flex gap-4">
+        <LogoutButton />
+        <DeleteButton />
+      </div>
     </div>
   );
 };
