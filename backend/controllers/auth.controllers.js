@@ -98,14 +98,8 @@ export const deleteAccount = async (req, res) => {
 
     // Delete the user's conversations
     const conversations = await Conversation.find({ participants: user._id });
-    console.log(
-      `this the list of conversations for this user :\n${conversations}`
-    );
     for (const conversation of conversations) {
       const messages = await Message.find({ conversation: conversation._id });
-      console.log(
-        `this the list of messages for this conversation :\n${messages}`
-      );
       for (const message of messages) {
         await Message.deleteOne({ _id: message._id });
       }
