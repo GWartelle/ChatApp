@@ -98,16 +98,22 @@ export const deleteAccount = async (req, res) => {
 
     // Delete the user's conversations
     const conversations = await Conversation.find({ participants: user._id });
+    console.log(
+      `this the list of conversations for this user :\n${conversations}`
+    );
     for (const conversation of conversations) {
       const messages = await Message.find({ conversation: conversation._id });
+      console.log(
+        `this the list of messages for this conversation :\n${messages}`
+      );
       for (const message of messages) {
-        await message.remove();
+        await Message.deleteOne({ _id: message._id });
       }
-      await conversation.remove();
+      await Conversation.deleteOne({ _id: conversation._id });
     }
 
     // Delete the user
-    await user.remove();
+    await User.findByIdAndDelete(user._id);
 
     res.clearCookie("jwt");
     res.status(204).json({ message: "Account deleted successfully" });
