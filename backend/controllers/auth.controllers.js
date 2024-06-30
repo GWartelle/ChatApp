@@ -1,5 +1,7 @@
 import bcrypt from "bcryptjs";
 import User from "../models/user.model.js";
+import Conversation from "../models/conversation.model.js";
+import Message from "./../models/message.model.js";
 import generateTokenAndSetCookie from "../utils/generateToken.js";
 
 export const signup = async (req, res) => {
@@ -86,6 +88,31 @@ export const logout = (req, res) => {
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
     console.error("Error in logout controller", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const deleteAccount = async (req, res) => {
+  try {
+    const user = req.user;
+
+    // Delete the user's conversations
+    const conversations = await Conversation.find({ participants: user._id });
+    for (const conversation of conversations) {
+      const messages = await Message.find({ conversation: conversation._id });
+      for (const message of messages) {
+        await message.remove();
+      }
+      await conversation.remove();
+    }
+
+    // Delete the user
+    await user.remove();
+
+    res.clearCookie("jwt");
+    res.status(204).json({ message: "Account deleted successfully" });
+  } catch (error) {
+    console.error("Error in delete account controller", error.message);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
