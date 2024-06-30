@@ -1,6 +1,7 @@
 import Conversations from "./Conversations";
 import LogoutButton from "./LogoutButton";
 import SearchInput from "./SearchInput";
+import DeleteButton from "./DeleteButton";
 
 const Sidebar = () => {
   return (
@@ -10,6 +11,7 @@ const Sidebar = () => {
       <Conversations />
 
       <LogoutButton />
+      <DeleteButton />
     </div>
   );
 };
