@@ -21,6 +21,13 @@ const DeleteButton = () => {
             title="Delete Account"
             onClick={() => setIsModalOpen(true)}
           />
+          {/* TEST */}
+          {/* {isModalOpen && (
+            <ConfirmationModal
+              setIsOpen={setIsModalOpen}
+              onConfirm={handleDeleteAccount}
+            />
+          )} */}
           <ConfirmationModal
             isOpen={isModalOpen}
             onRequestClose={() => setIsModalOpen(false)}

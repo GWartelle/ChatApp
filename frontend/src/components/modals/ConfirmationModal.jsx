@@ -7,7 +7,8 @@ const ConfirmationModal = ({ isOpen, onRequestClose, onConfirm }) => {
       onRequestClose={onRequestClose}
       ariaHideApp={false}
       contentLabel="Confirmation Modal"
-      overlayClassName="overlay"
+      className=""
+      overlayClassName=""
     >
       <h2 className="text-lg font-bold mb-4">Delete Account</h2>
       <p className="mb-4">Are you sure you want to delete your account?</p>
@@ -30,3 +31,21 @@ const ConfirmationModal = ({ isOpen, onRequestClose, onConfirm }) => {
 };
 
 export default ConfirmationModal;
+
+// TEST
+// const ConfirmationModal = ({ setIsOpen, onConfirm }) => {
+//   return (
+//     <div className="">
+//       <div className="">
+//         <h2>Delete Account</h2>
+//         <p>Are you sure you want to delete your account?</p>
+//         <div className="modalButtons">
+//           <button onClick={onConfirm}>Yes</button>
+//           <button onClick={() => setIsOpen(false)}>No</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ConfirmationModal;
