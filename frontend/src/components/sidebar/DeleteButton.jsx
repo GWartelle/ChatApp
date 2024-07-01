@@ -15,19 +15,21 @@ const DeleteButton = () => {
   return (
     <div>
       {!loading ? (
-        <BiTrash
-          className="w-6 h-6 text-white cursor-pointer"
-          title="Delete Account"
-          onClick={() => setIsModalOpen(true)}
-        />
+        <>
+          <BiTrash
+            className="w-6 h-6 text-white cursor-pointer"
+            title="Delete Account"
+            onClick={() => setIsModalOpen(true)}
+          />
+          <ConfirmationModal
+            isOpen={isModalOpen}
+            onRequestClose={() => setIsModalOpen(false)}
+            onConfirm={handleDeleteAccount}
+          />
+        </>
       ) : (
         <span className="loading loading-spinner"></span>
       )}
-      <ConfirmationModal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        onConfirm={handleDeleteAccount}
-      />
     </div>
   );
 };
