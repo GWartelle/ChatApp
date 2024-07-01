@@ -1,14 +1,12 @@
 import Modal from "react-modal";
 
-Modal.setAppElement("#root");
-
 const ConfirmationModal = ({ isOpen, onRequestClose, onConfirm }) => {
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
+      ariaHideApp={false}
       contentLabel="Confirmation Modal"
-      className="modal"
       overlayClassName="overlay"
     >
       <h2 className="text-lg font-bold mb-4">Delete Account</h2>
