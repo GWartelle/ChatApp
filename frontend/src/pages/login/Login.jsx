@@ -56,7 +56,7 @@ const Login = () => {
           </Link>
           <div>
             <button
-              className="btn btn-block btn-sm mt-2 border border-slate-700"
+              className="btn btn-block btn-sm mt-2 border border-slate-700 hover:text-white"
               disabled={loading}
             >
               {!loading ? (
