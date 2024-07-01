@@ -7,8 +7,8 @@ const DeleteButton = () => {
   const { loading, deleteAccount } = useDelete();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleDeleteAccount = () => {
-    deleteAccount();
+  const handleDeleteAccount = async () => {
+    await deleteAccount();
     setIsModalOpen(false);
   };
 
