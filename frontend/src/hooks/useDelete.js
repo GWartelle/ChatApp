@@ -13,10 +13,10 @@ const useDelete = () => {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
-      const data = await res.json();
-      if (data.error) {
-        throw new Error(data.error);
+      if (!res.ok) {
+        throw new Error("Failed to delete account");
       }
+
       localStorage.removeItem("chat-user");
       setAuthUser(null);
       toast.success("Successfully deleted account!");
