@@ -69,10 +69,14 @@ This project is built under the MIT license so you reuse the entirety of this pr
 
 <h3 id="built-with">Built With</h3>
 
+- Stack :
+
 [![React](https://img.shields.io/badge/React-149ECA?style=for-the-badge&logo=react&logoColor=FFF)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-3F873F?style=for-the-badge&logo=nodedotjs&logoColor=FFF)](https://nodejs.org/en)
 [![Express](https://img.shields.io/badge/Express-FCFCFC?style=for-the-badge&logo=express&logoColor=000)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-00ED64?style=for-the-badge&logo=mongodb&logoColor=FFF)](https://www.mongodb.com/)
+
+- Tools :
 
 [![Vite](https://img.shields.io/badge/Vite-AA4DFE?style=for-the-badge&logo=vite&logoColor=FFF)](https://vitejs.dev/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
