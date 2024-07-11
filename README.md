@@ -63,8 +63,6 @@ On the frontend, we use Zustand for global state management, React Hot Toast for
 
 This project has been deployed on Render, using a free tier account, so the app has some spin up time before loading.
 
-This project is built under the MIT license so you reuse the entirety of this project.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <h3 id="built-with">Built With</h3>
