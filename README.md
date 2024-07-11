@@ -14,7 +14,7 @@
     <img src="./public/chatapp_logo.svg" alt="ShinyLogo"  height="70">
   </a>
 </div>
-<h1 align="center">Shiny Agency</h1>
+<h1 align="center">ChatApp</h1>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -45,7 +45,7 @@
 
 ## About The Project
 
-![Shiny Home Page Screenshot](images/HomePage_Screen.png)
+![ChatApp Home Page Screenshot](./public/discussion_screen.png)
 
 This project was completed as part of the <a href="https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete">"Créez une application React complète"</a> course created and distributed by OpenClassrooms.
 This project has not been deployed, and therefore, must be cloned to be used.
