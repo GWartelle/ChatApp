@@ -113,7 +113,7 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
    npm install
    ```
 
-2. Next, in the editor of your choice, open the .env.example file. For example, using VSCode, you can run this command :
+2. Next, in the editor of your choice, open the `.env.example` file. For example, using VSCode, you can run this command :
 
    ```sh
    code .env.example
@@ -128,18 +128,18 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
    NODE_ENV=...
    ```
 
-   For the PORT, you can choose whichever one you prefer.
+   For the `PORT`, you can choose whichever one you prefer.
 
-   For the MONGO_DB_URI, you can create your own free database on [MongoDB](https://www.mongodb.com/).
+   For the `MONGO_DB_URI`, you can create your own free database on [MongoDB](https://www.mongodb.com/).
 
-   For JWT_SECRET, a random string of characters will do the trick.
+   For `JWT_SECRET`, a random string of characters will do the trick.
    To easily create one, open a bash terminal and run this commmand :
 
    ```ba
    openssl rand -base64 32
    ```
 
-   For NODE_ENV, leave it as `development` unless you plan to deploy the app, in which case you should change it to `production`.
+   For `NODE_ENV`, leave it as `development` unless you plan to deploy the app, in which case you should change it to `production`.
 
 4. Once it's done, change the name of the file to `.env` :
 
