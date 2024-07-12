@@ -67,7 +67,7 @@ This project has been deployed on Render, using a free tier account, so the app 
 
 <h3 id="built-with">Built With</h3>
 
-- Stack :
+- Tech stack :
 
 [![React](https://img.shields.io/badge/React-149ECA?style=for-the-badge&logo=react&logoColor=FFF)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-3F873F?style=for-the-badge&logo=nodedotjs&logoColor=FFF)](https://nodejs.org/en)
@@ -107,13 +107,13 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
 
 <h3 id="backend">Backend</h3>
 
-1. For the backend, in the root of the project, you can start by running the command `npm install` to install all the packages :
+1. For the backend, in the root of the project, start by running the command `npm install` to install all the packages :
 
    ```sh
    npm install
    ```
 
-2. Next, in the editor of you're choice, open the .env.example file. For example, using VSCode, you can run this command :
+2. Next, in the editor of your choice, open the .env.example file. For example, using VSCode, you can run this command :
 
    ```sh
    code .env.example
@@ -121,25 +121,25 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
 
 3. Update the environment variables with your own :
 
-   ```sh
-   PORT=3000
-   MONGO_DB_URI=mongodb+srv://username.mongodb.net/your-data-base
-   JWT_SECRET=your-jwt-secret-key
-   NODE_ENV=development
+   ```js
+   PORT=...
+   MONGO_DB_URI=...
+   JWT_SECRET=...
+   NODE_ENV=...
    ```
 
-   For the port, you can choose whichever one you prefer.
+   For the PORT, you can choose whichever one you prefer.
 
-   For the MongoDB URI, you can create your own free database on [MongoDB](https://www.mongodb.com/).
+   For the MONGO_DB_URI, you can create your own free database on [MongoDB](https://www.mongodb.com/).
 
-   For JWT, a random string of characters will do the trick.
+   For JWT_SECRET, a random string of characters will do the trick.
    To easily create one, open a bash terminal and run this commmand :
 
    ```ba
    openssl rand -base64 32
    ```
 
-   And for NODE_ENV, you can leave it as such unless if you want to deploy this app, then you'd change it for `production`
+   For NODE_ENV, leave it as `development` unless you plan to deploy the app, in which case you should change it to `production`.
 
 4. Once it's done, change the name of the file to `.env` :
 
@@ -155,7 +155,7 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
 
 <h3 id="frontend">Frontend</h3>
 
-1. For the frontend, you must go in the frontend folder and then run the command `npm install` :
+1. For the frontend, you must go in the frontend folder and run the command `npm install` :
 
    ```sh
    cd frontend
@@ -179,7 +179,7 @@ If you want to clone this project, you must have [Node.js](https://nodejs.org/en
 ![ChatApp Login Page Screenshot](./public/login_screen.png)
 
 You will land on the login page.
-Here you can obviously log in, using your Username and your password.
+Here you can obviously log in, using your username and your password.
 But if you don't have an account yet, you can click on `Don't have an account?` to be redirected to the register page.
 
 ![ChatApp Register Page Screenshot](./public/register_screen.png)
@@ -248,10 +248,10 @@ export const deleteAccount = async (req, res) => {
 After getting the user from the request sent by the frontend, the controller finds all the conversations this user had.
 And within each of these conversations, the controller goes through all the messages and deletes them one by one.
 
-Once every messages are deleted from the database, it is time to delete the conversation itself, and then tackle the next conversation.
+Once all the messages from a conversation are deleted, it is time to delete the conversation itself, and then tackle the next one.
 The controller reapeat this cycle until every messages and every conversations this user had have been deleted.
 
-Once this is done, the only thing left to do for the controller is to delete the user itself, and then clear its token from the cookies to effectively log the user out.
+When this is done, the only thing left to do for the controller is to delete the user itself, and then clear its token from the cookies to effectively log the user out.
 
 And now let's take a look at the frontend logic that deals with this, the `useDelete` hook :
 
@@ -336,7 +336,7 @@ Next, it creates a `isModalOpen` state to control the display of the `Confirmati
 The `deleteAccount()` function is called by the `handleDeleteAccount` handle, which also sets the `setIsModalOpen` state to false.
 
 When the trash icon is clicked, the `isModalOpen` state is set to true.
-This state is passed on to `ConfirmationModal`, along with is setter, and the `handleDeleteAccount` handle.
+This state is passed on to `ConfirmationModal`, along with its setter, and the `handleDeleteAccount` handle.
 
 So, let's finally take a look at this `ConfirmationModal` component :
 
@@ -373,9 +373,11 @@ const ConfirmationModal = ({ isOpen, onRequestClose, onConfirm }) => {
 
 The `isOpen` attribute of this modal controls its display based on the `isModalOpen` state that has been passed on, which can also be set back to false with `onRequestClose`.
 
-This modal simply asks the user to make a choice between `No` which calls `onRequestClose` and closes the modal, and `Yes` which calls back the `deleteAccount` function called by the handle passed on to `onConfirm`.
+This modal simply asks the user to make a choice between `No` which calls `onRequestClose` and closes the modal, and `Yes` which calls the `deleteAccount` function using the handle passed on to `onConfirm`.
 
-That's it for the delete account feature !
+Once this is done, the user's account is effectively deleted, and he/she is sent back to the login page.
+
+And that's all for the delete account feature !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -388,11 +390,11 @@ Therefore, if I had more time on my hands to improve this web app, here are the 
 
 - Firstly, the most important point in my opinion, would be to add responsivity. This is a crucial feature for all modern web apps, and this project lacks it.
 - Secondly, I would add a friend list feature. Instead of being able to send messages to every users, one user should have to ask another to be his/her friend before sending him/her a message.
-- Thirdly, it'd be a great improvement if it was possible to upload images, videos and/or audios in discussions, as it is a staple feature in most real-time messaging apps.
+- Thirdly, it'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
 - Fourthly, it would be rather logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
 - Fifthly, in the same vein of the preceding feature, it would be coherent to have a password retrieval feature, as it is a staple of all modern apps.
 
-After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, or notifying the user when he/she receives a new message from another discussion, but I think this will be enough for now.
+After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, or notifying the user when he/she receives a new message from another discussion, but I think this would be a good start.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -402,7 +404,7 @@ After that, this project could benefit from other little tweaks like ordering ot
 
 If you want to see more of my work, I invite you to go check my [portfolio](https://gwartelle.github.io/MyPortfolio/).
 
-You can also take look at my other projects on my [github](https://github.com/GWartelle),
+You can also take a look at my other projects on my [github](https://github.com/GWartelle),
 
 And if you'd like to get in touch with me, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/gabriel-wartelle/).
 
