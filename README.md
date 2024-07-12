@@ -77,7 +77,7 @@ This project has been deployed on Render, using a free tier account, so the app 
 - Tools :
 
 [![Vite](https://img.shields.io/badge/Vite-AA4DFE?style=for-the-badge&logo=vite&logoColor=FFF)](https://vitejs.dev/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
 [![DaisyUI](https://img.shields.io/badge/Daisy_UI-FF9903?style=for-the-badge&logo=daisyui&logoColor=FFF)](https://daisyui.com/)
 [![ReactRouter](https://img.shields.io/badge/React_Router-F44250?style=for-the-badge&logo=reactrouter&logoColor=FFF)](https://reactrouter.com/en/main)
 [![SocketIO](https://img.shields.io/badge/Socket.IO-25C2A0?style=for-the-badge&logo=socketdotio&logoColor=FFF)](https://socket.io/)
