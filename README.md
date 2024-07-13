@@ -388,11 +388,11 @@ And that's all for the delete account feature !
 As this project is primarily built for training purposes, it is rather light in terms of features.
 Therefore, if I had more time on my hands to improve this web app, here are the features I would implement :
 
-- Firstly, the most important point in my opinion, would be to add responsivity. This is a crucial feature for all modern web apps, and this project clearly lacks it.
-- Secondly, even if it's not really crucial, it would be important to have a password retrieval feature, as it is a staple of all modern apps.
-- Thirdly, I would add a friend list feature. Instead of being able to contact every other users, one user should have to send a friend request before being able to send messages.
-- Fourthly, it'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
-- Fifthly, it would be rather logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
+1. The most important point in my opinion, would be to add responsivity. This is a crucial feature for all modern web apps, and this project clearly lacks it.
+2. It would also be important to have a password retrieval feature, as it is a staple of all modern apps.
+3. Next, I would add a friend list feature. Instead of being able to contact every other users, one user should have to send a friend request before being able to send messages.
+4. It'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
+5. Finally, it would be logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
 
 After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, notifying the user when he/she receives a new message from another discussion, or being able to create an account using google, apple or other credentials, but I think this would be a good start.
 
