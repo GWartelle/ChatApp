@@ -56,7 +56,7 @@ This project was built following this [tutorial](https://www.youtube.com/watch?v
 
 ChatApp is a realtime messaging web app, built using the MERN Stack (MongoDB, Express.js, React, Node.js).
 
-On the backend, we have some basic CRUD operations: creating an account, logging in and out, and deleting an account.
+On the backend, we have some basic CRUD operations: creating and deleting a user account, logging in and out, creating and reading messages, and reading users.
 Passwords are encrypted using Bcryptjs, the authentication and authorization is delt with using JSON Web Token, and the real-time messaging with Socket.io.
 
 On the frontend, we use React Router for navigation as this is a SPA, we use Zustand for global state management, React Hot Toast for user notifications, and React Context combined with Socket.io for online status. The styling is done with TailwindCSS and Daisy UI.
