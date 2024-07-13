@@ -59,7 +59,7 @@ ChatApp is a realtime messaging web app, built using the MERN Stack (MongoDB, Ex
 On the backend, we have some basic CRUD operations: creating an account, logging in and out, and deleting an account.
 Passwords are encrypted using Bcryptjs, the authentication and authorization is delt with using JSON Web Token, and the real-time messaging with Socket.io.
 
-On the frontend, we use Zustand for global state management, React Hot Toast for user notifications, and React Context combined with Socket.io for online status. The styling is done with TailwindCSS and Daisy UI.
+On the frontend, we use React Router for navigation as this is a SPA, we use Zustand for global state management, React Hot Toast for user notifications, and React Context combined with Socket.io for online status. The styling is done with TailwindCSS and Daisy UI.
 
 This project has been deployed on Render, using a free tier account, so the app has some spin up time before loading.
 
@@ -77,9 +77,9 @@ This project has been deployed on Render, using a free tier account, so the app 
 - Tools :
 
 [![Vite](https://img.shields.io/badge/Vite-AA4DFE?style=for-the-badge&logo=vite&logoColor=FFF)](https://vitejs.dev/)
+[![ReactRouter](https://img.shields.io/badge/React_Router-F44250?style=for-the-badge&logo=reactrouter&logoColor=FFF)](https://reactrouter.com/en/main)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
 [![DaisyUI](https://img.shields.io/badge/Daisy_UI-FF9903?style=for-the-badge&logo=daisyui&logoColor=FFF)](https://daisyui.com/)
-[![ReactRouter](https://img.shields.io/badge/React_Router-F44250?style=for-the-badge&logo=reactrouter&logoColor=FFF)](https://reactrouter.com/en/main)
 [![SocketIO](https://img.shields.io/badge/Socket.IO-25C2A0?style=for-the-badge&logo=socketdotio&logoColor=FFF)](https://socket.io/)
 [![JsonWebToken](https://img.shields.io/badge/JWT-00B9F1?style=for-the-badge&logo=jsonwebtokens&logoColor=FFF)](https://jwt.io/)
 
@@ -388,13 +388,13 @@ And that's all for the delete account feature !
 As this project is primarily built for training purposes, it is rather light in terms of features.
 Therefore, if I had more time on my hands to improve this web app, here are the features I would implement :
 
-- Firstly, the most important point in my opinion, would be to add responsivity. This is a crucial feature for all modern web apps, and this project lacks it.
-- Secondly, I would add a friend list feature. Instead of being able to send messages to every users, one user should have to ask another to be his/her friend before sending him/her a message.
-- Thirdly, it'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
-- Fourthly, it would be rather logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
-- Fifthly, in the same vein of the preceding feature, it would be coherent to have a password retrieval feature, as it is a staple of all modern apps.
+- Firstly, the most important point in my opinion, would be to add responsivity. This is a crucial feature for all modern web apps, and this project clearly lacks it.
+- Secondly, even if it's not really crucial, it would be important to have a password retrieval feature, as it is a staple of all modern apps.
+- Thirdly, I would add a friend list feature. Instead of being able to contact every other users, one user should have to send a friend request before being able to send messages.
+- Fourthly, it'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
+- Fifthly, it would be rather logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
 
-After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, or notifying the user when he/she receives a new message from another discussion, but I think this would be a good start.
+After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, notifying the user when he/she receives a new message from another discussion, or being able to create an account using google, apple or other credentials, but I think this would be a good start.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
