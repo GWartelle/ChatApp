@@ -28,6 +28,14 @@
       </ul>
     </li>
     <li>
+      <a href="#folder-structure">Folder Structure</a>
+      <ul>
+        <li><a href="#root">Root folder</a></li>
+        <li><a href="#server">Backend folder</a></li>
+        <li><a href="#client">Frontend folder</a></li>
+      </ul>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -54,14 +62,14 @@ If you want to take a direct look at this project, you can do so right [here](ht
 
 This project was built following this [tutorial](https://www.youtube.com/watch?v=HwCqsOis894).
 
-ChatApp is a realtime messaging web app, built using the MERN Stack (MongoDB, Express.js, React, Node.js).
+ChatApp is a realtime messaging web app, built using the MERN Stack ([MongoDB](https://www.mongodb.com/), [Express.js](https://expressjs.com/), [React](https://react.dev/), [Node.js](https://nodejs.org/en)).
 
 On the backend, we have some basic CRUD operations: creating and deleting a user account, logging in and out, creating and reading messages, and reading users.
-Passwords are encrypted using Bcryptjs, the authentication and authorization is delt with using JSON Web Token, and the real-time messaging with Socket.io.
+The connection to the database is set up using [Mongoose](https://mongoosejs.com/), passwords are encrypted using [Bcrypt](https://github.com/kelektiv/node.bcrypt.js#readme), the authentication and authorization is delt with using [JSON Web Token](https://jwt.io/), and the real-time messaging using [Socket.io](https://socket.io/).
 
-On the frontend, we use React Router for navigation as this is a SPA, we use Zustand for global state management, React Hot Toast for user notifications, and React Context combined with Socket.io for online status. The styling is done with TailwindCSS and Daisy UI.
+On the frontend, we use [React Router](https://reactrouter.com/en/main) for navigation as this is a SPA, we use [Zustand](https://zustand-demo.pmnd.rs/) for global state management, and [React Hot Toast](https://react-hot-toast.com/) for user notifications. The styling is done with [TailwindCSS](https://tailwindcss.com/) and [Daisy UI](https://daisyui.com/).
 
-This project has been deployed on Render, using a free tier account, so the app has some spin up time before loading.
+This project is hosted on [Render](https://render.com/) and utilizes their power-efficient servers, which spin down after periods of inactivity. As a result, you may experience a slightly longer loading time as the server spins back up for use.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +89,72 @@ This project has been deployed on Render, using a free tier account, so the app 
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
 [![DaisyUI](https://img.shields.io/badge/Daisy_UI-FF9903?style=for-the-badge&logo=daisyui&logoColor=FFF)](https://daisyui.com/)
 [![SocketIO](https://img.shields.io/badge/Socket.IO-25C2A0?style=for-the-badge&logo=socketdotio&logoColor=FFF)](https://socket.io/)
+[![Mongoose](https://img.shields.io/badge/Mongoose-A03333?style=for-the-badge&logo=mongoose&logoColor=FFF)](https://mongoosejs.com/)
 [![JsonWebToken](https://img.shields.io/badge/JWT-00B9F1?style=for-the-badge&logo=jsonwebtokens&logoColor=FFF)](https://jwt.io/)
+[![Render](https://img.shields.io/badge/Render-8A05FF?style=for-the-badge&logo=render&logoColor=FFF)](https://render.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FOLDER STRUCTURE -->
+
+<h2 id="folder-structure">Folder Structure</h2>
+
+<h3 id="root">Root folder</h3>
+
+Let me present to you the folder structure of this project, with its main components.
+
+In the root folder, we find the following files: `README.md`, `LICENSE`, `.gitignore`, `package.json` with the backend packages, and `.env.example` used as a base to set up the `.env` file for replicating this project.
+
+We also find the `public/` folder with the images used for this `README.md` file.
+
+The rest of the project is divided in the two folders: the `backend/` folder for the server, and the `frontend/` folder for the client.
+
+<h3 id="server">Backend folder</h3>
+
+In the `backend/` folder, we first have the `server.js` file where the bases of the server is set up.
+
+Then, in `backend/`, we find multiple folders :
+
+`controllers/` with the `auth.controllers.js`, `message.controllers.js` and `user.controllers.js` files, which are the controllers used in the routes of the same name.
+
+`db/` with the `connectToMongoDB.js` file to set up the connection to the MongoDB database.
+
+`middleware/` with the `protectRoute.js` middleware used to verify the token of the user.
+
+`models/` with the `conversation.model.js`, `message.model.js` and `user.model.js` files which set up their respective mongoose models.
+
+`routes/` with the `auth.routes.js`, `message.routes.js` and `user.routes.js` files, which set up their respective routes.
+
+`socket/` with the `socket.js` file to set up the connection to Socket.io.
+
+And `utils/` with the `generateToken.js` file used to generate a token when the user registers or logs in.
+
+<h3 id="client">Frontend folder</h3>
+
+Now for the `frontend/` folder, the most important files are the `index.html` file on which the app sits on, the `package.json` file once again for the packages, and configurations files for Vite.js, TailwindCSS and ESLint.
+
+Next, in `frontend/`, there is also a `public/` folder with the images for the favicon and the background.
+
+Then, still in `frontend/`, there's the `src/` folder where most of the frontend finds its place.
+In `src/`, we find `main.jsx` which sets up React, `App.jsx` that sets up the routes, and `index.css` with a few global styles.
+
+For the rest of `src/`, we find multiple folders:
+
+`assets/sounds` with the notification sound (not used in this version of the project).
+
+`components/` has itself multiple folders: `messages/` with all the components used for messages, `modals/` with the delete account modal, `sidebar/` with all the components that compose the sidebar, and `skeletons/` with the skeleton used for messages.
+
+`context/` with the `AuthContext.jsx` and `SocketContext.jsx` files that set up their respectiv context.
+
+`hooks/` with all the hooks called throughout the application.
+
+`pages/` with the `home/`, `login/` and `signup/` folders, each their respective page.
+
+`utils/` with `emojis.js` that generate a random emoji, and `extractTime.js` that formats time correctly for messages.
+
+And finally `zustand/` for state management files.
+
+That's it for the folder structure !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
