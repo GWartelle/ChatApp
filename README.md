@@ -36,7 +36,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#cloning-the-project">Cloning the project</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#backend">Backend</a></li>
@@ -158,9 +158,9 @@ That's it for the folder structure !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
+<!-- CLONING THE PROJECT -->
 
-<h2 id="getting-started">Getting Started</h2>
+<h2 id="cloning-the-project">Cloning the project</h2>
 
 <h3 id="prerequisites">Prerequisites</h3>
 
