@@ -477,7 +477,7 @@ After that, this project could benefit from other little tweaks like ordering ot
 
 If you want to see more of my work, I invite you to go check my [portfolio](https://gwartelle.github.io/MyPortfolio/).
 
-You can also take a look at my other projects on my [github](https://github.com/GWartelle),
+You can also take a look at my other projects on my [github](https://github.com/GWartelle).
 
 And if you'd like to get in touch with me, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/gabriel-wartelle/).
 
