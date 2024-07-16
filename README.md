@@ -467,7 +467,7 @@ Therefore, if I had more time on my hands to improve this web app, here are the 
 4. It'd be a great improvement if it was possible to upload images, videos and audios in discussions, as it is a staple feature in most real-time messaging apps.
 5. Finally, it would be logical to add some account update feature. The user would be able to choose a different profile picture, select a specific emoji to represent his/her account, and could change his/her username or password.
 
-After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, notifying the user when he/she receives a new message from another discussion, or being able to create an account using google, apple or other credentials, but I think this would be a good start.
+After that, this project could benefit from other little tweaks like ordering other users' profiles based on which discussion is the most recent, notifying the user when he/she receives a new message from another discussion, adding the date to messages older than a day, or being able to create an account using google, apple or other credentials, but I think this would be a good start.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
