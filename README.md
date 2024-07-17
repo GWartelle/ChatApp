@@ -454,7 +454,7 @@ And that's all for the delete account feature !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- IMPROVEMENT  -->
+<!-- IMPROVEMENTS  -->
 
 <h2 id="improvements">Improvements</h2>
 
