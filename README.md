@@ -10,7 +10,7 @@
 <!-- PROJECT TITLE -->
 
 <div align="center">
-  <a href="https://chatapp-oy8v.onrender.com/">
+  <a href="https://chatapp-oy8v.onrender.com/" target="_blank" rel="noopener noreferrer">
     <img src="./public/chatapp_logo.svg" alt="ChatApp Logo"  height="70">
   </a>
 </div>
